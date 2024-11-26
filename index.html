@@ -14,34 +14,36 @@
             height: 100vh;
             margin: 0;
             background-color: #f5f5f5;
+            flex-direction: column; /* Stack elements vertically */
         }
-        .container {
+        .dropdown-container {
+            margin-bottom: 20px; /* Space between dropdown and video */
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
             text-align: center;
         }
         video {
             width: auto;
-            height: 80vh; /* 9:16 aspect ratio height */
+            height: 80vh; /* Maintain 9:16 aspect ratio */
             max-width: 90vw;
-        }
-        select {
-            margin-top: 20px;
-            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <video id="videoPlayer" controls>
-            <source src="twerk.mkv" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
+    <div class="dropdown-container">
         <select id="videoSelector" onchange="changeVideo()">
-            <option value="twerk.mkv">Twerkin</option>
-            <option value="sunsetlake.mp4">Sunset Lake</option>
+            <option value="twerk.mkv">Twerk</option>
             <option value="jumprope.mp4">Jump Rope</option>
+            <option value="sunsetlake.mp4">Sunset Lake</option>
         </select>
     </div>
+    
+    <video id="videoPlayer" controls>
+        <source src="twerk.mkv" type="video/mkv">
+        Your browser does not support the video tag.
+    </video>
 
     <script>
         function changeVideo() {
