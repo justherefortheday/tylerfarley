@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyler Farley Appreciation Post</title>
+    <title>Merry 3D Christmas</title>
     <style>
         /* Simple styling */
         body {
@@ -13,7 +13,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f5f5f5;
+            background-color: #555;
             flex-direction: column; /* Stack elements vertically */
         }
         .dropdown-container {
@@ -40,7 +40,7 @@
         </select>
     </div>
     
-    <video id="videoPlayer" controls>
+    <video id="videoPlayer" controls autoplay muted>
         <source src="twerk.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
@@ -53,6 +53,12 @@
             videoPlayer.src = selectedVideo;
             videoPlayer.play(); // Automatically play the selected video
         }
+
+        // Ensure autoplay on page load
+        window.onload = () => {
+            const videoPlayer = document.getElementById('videoPlayer');
+            videoPlayer.play();
+        };
     </script>
 </body>
 </html>
