@@ -48,14 +48,6 @@
     </style>
 </head>
 <body>
-    <div class="title">WELCOME</div>
-    <div class="image-container">
-        <img src="image0.jpeg" alt="Decorative Image">
-    </div>
-    <div class="description">
-        You’ve seen this plenty in 2 dimensions. <br> 
-        But have you ever wondered where the third one went?
-    </div>
     <div class="dropdown-container">
         <select id="videoSelector" onchange="changeVideo()">
             <option value="Baseball Hit.mp4">Baseball Hit</option>
@@ -81,7 +73,14 @@
         <source src="Baseball Hit.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
+    <div class="title">WELCOME</div>
+    <div class="image-container">
+        <img src="image0.jpeg" alt="Decorative Image">
+    </div>
+    <div class="description">
+        You’ve seen this plenty in 2 dimensions. <br> 
+        But have you ever wondered where the third one went?
+    </div>
     <script>
         function changeVideo() {
             const videoPlayer = document.getElementById('videoPlayer');
