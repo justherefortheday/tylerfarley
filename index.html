@@ -11,10 +11,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column; /* Stack elements vertically */
             height: 100vh;
             margin: 0;
             background-color: #555;
-            flex-direction: column; /* Stack elements vertically */
+            color: white;
+            text-align: center;
+        }
+        .title {
+            margin: 20px 0 10px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .description {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .image-container img {
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 20px;
         }
         .dropdown-container {
             margin-bottom: 20px; /* Space between dropdown and video */
@@ -22,7 +39,6 @@
         select {
             padding: 10px;
             font-size: 16px;
-            text-align: center;
         }
         video {
             width: auto;
@@ -32,30 +48,35 @@
     </style>
 </head>
 <body>
-<div class="dropdown-container">
-    <select id="videoSelector" onchange="changeVideo()">
-        <option value="Baseball Hit.mp4">Baseball Hit</option>
-        <option value="Breakdance Uprock.mp4">Breakdance Uprock</option>
-        <option value="Crawling.mp4">Crawling</option>
-        <option value="Defeated.mp4">Defeated</option>
-        <option value="Drunk Walk.mp4">Drunk Walk</option>
-        <option value="Dying.mp4">Dying</option>
-        <option value="Fall Flat.mp4">Fall Flat</option>
-        <option value="files.txt">files.txt</option>
-        <option value="Hurricane Kick.mp4">Hurricane Kick</option>
-        <option value="Joyful Jump.mp4">Joyful Jump</option>
-        <option value="Jumping Down.mp4">Jumping Down</option>
-        <option value="Kick to the Groin.mp4">Kick to the Groin</option>
-        <option value="Praying.mp4">Praying</option>
-        <option value="Robot Dance.mp4">Robot Dance</option>
-        <option value="Silly Dancing.mp4">Silly Dancing</option>
-        <option value="Swing to Land.mp4">Swing to Land</option>
-        <option value="Throw Grenade.mp4">Throw Grenade</option>
-        <option value="Twerk.mp4">Twerk</option>
-    </select>
-</div>
-
-    
+    <div class="title">WELCOME</div>
+    <div class="image-container">
+        <img src="image0.jpeg" alt="Decorative Image">
+    </div>
+    <div class="description">
+        You’ve seen this plenty in 2 dimensions. <br> 
+        But have you ever wondered where the third one went?
+    </div>
+    <div class="dropdown-container">
+        <select id="videoSelector" onchange="changeVideo()">
+            <option value="Baseball Hit.mp4">Baseball Hit</option>
+            <option value="Breakdance Uprock.mp4">Breakdance Uprock</option>
+            <option value="Crawling.mp4">Crawling</option>
+            <option value="Defeated.mp4">Defeated</option>
+            <option value="Drunk Walk.mp4">Drunk Walk</option>
+            <option value="Dying.mp4">Dying</option>
+            <option value="Fall Flat.mp4">Fall Flat</option>
+            <option value="Hurricane Kick.mp4">Hurricane Kick</option>
+            <option value="Joyful Jump.mp4">Joyful Jump</option>
+            <option value="Jumping Down.mp4">Jumping Down</option>
+            <option value="Kick to the Groin.mp4">Kick to the Groin</option>
+            <option value="Praying.mp4">Praying</option>
+            <option value="Robot Dance.mp4">Robot Dance</option>
+            <option value="Silly Dancing.mp4">Silly Dancing</option>
+            <option value="Swing to Land.mp4">Swing to Land</option>
+            <option value="Throw Grenade.mp4">Throw Grenade</option>
+            <option value="Twerk.mp4">Twerk</option>
+        </select>
+    </div>
     <video id="videoPlayer" controls autoplay muted>
         <source src="Baseball Hit.mp4" type="video/mp4">
         Your browser does not support the video tag.
